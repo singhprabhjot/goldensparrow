@@ -1,6 +1,6 @@
 <?php
  
-    $to = "contact.designstub.com"; //Change email here
+    $to = "pankajsuthar27302@gmail.com"; //Change email here
     $from = $_REQUEST['email']; 
     $name = $_REQUEST['name']; 
     $headers = "From: $from"; 

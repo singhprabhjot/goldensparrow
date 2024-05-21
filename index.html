@@ -12,89 +12,171 @@
 </head>
 <body>
 
-<!--main-->
-<section class="main">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-sm-6"> 
-        <!--logo-->
-        <!--logo end--> 
+<header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img src="./images/img/logo.png" alt="Logo" title=""></a>
       </div>
-      <div class="col-md-6 col-sm-6"> 
-        
-        <!--social-->
-        <div class="social text-center">
-          <ul>
-            <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-          </ul>
-        </div>
-        <!--social end--> 
+      <div class="site-links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
       </div>
     </div>
+</header>
+  <!--Header-Upper-->
+
+  <!-- slider starts -->
+  <section class="slider-container">
+    <div class="slider-images">
+      <div class="slider-img" data-title="Advanced Data Management" data-text="Unlock the power of your data with our cutting-edge data mining and analysis services. Make informed decisions and stay ahead of the competition.">
+        <img src="./images/img/slider/s-3.jpg" alt="Golden Sparrow">
+      </div>
+      <div class="slider-img" data-title="Comprehensive Computer Services" data-text="Leverage our expertise in IT services to streamline your operations. From system integration to software development, we've got you covered.">
+        <img src="./images/img/slider/s-2.jpg" alt="Computer Services">
+      </div>
+      <div class="slider-img active" data-title="Welcome to Golden Sparrow" data-text="Your trusted partner in professional services. Discover innovative solutions designed to empower your business and drive growth.">
+        <img src="./images/img/slider/s-5.jpg" alt="Data Management">
+      </div>
+      <div class="slider-img" data-title="Expert Recruitment Solutions" data-text="Build your dream team with our specialized recruitment services. We connect you with exceptional talent tailored to your unique needs.">
+        <img src="./images/img/slider/s-4.jpg" alt="Recruitment Solutions">
+      </div>
+      <div class="slider-img" data-title="Operational Excellence" data-text="Optimize your processes with our process improvement and operational payroll services. Enhance efficiency and focus on what you do best.">
+        <img src="./images/img/slider/s-1.jpg" alt="Operational Excellence">
+      </div>
+    </div>
+    <div class="slider-text">
+      <h2 id="slider-title">Welcome to Golden Sparrow</h2>
+      <p id="slider-description">Your trusted partner in professional services. Discover innovative solutions designed to empower your business and drive growth.</p>
+    </div>
+  </section>
+  
+
+<!--main-->
+
+<!--main end--> 
+
+<!-- about us starts -->
+<section class="about-us">
+  <div class="container">
     <div class="row">
-      <div class="col-md-12"> 
-        
-        <!--welcome-message-->
-        <header class="welcome-message text-center">
-          <h1><span class="rotate">Welcome to Golden Sparrow</span></h1>
-        </header>
-        <!--welcome-message end--> 
-        
-        <!--sub-form-->
-        <div class="sub-form text-center">
-          <div class="row">
-            <div class="col-md-5 center-block col-sm-8 col-xs-11">
-              <form role="form" id="mc-form" action="">
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Enter your tracking number" required value="" name="id">
-                  <span class="input-group-btn">
-                  <button type="submit" class="btn btn-default" id="mc-subscribe" value="Subscribe" name="subscribe">Track<i class="fa fa-paper-plane"></i></button>
-                  </span> </div>
-              </form>
-              <p id="mc-notification"></p>
-            </div>
-          </div>
+      <div class="col-md-12">
+        <div class="about-heading">
+          <h2>About Us</h2>
         </div>
-        <!--sub-form end--> 
-        
-        
-        
+      </div>
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <div class="about-image">
+          <img src="./images/img/about/a-1.jpg" alt="About Golden Sparrow">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="about-content">
+          <p>Welcome to <strong>Golden Sparrow</strong>, your trusted partner in the realm of professional services. We are a dynamic and innovative company dedicated to empowering businesses with cutting-edge solutions and a team of exceptional professionals.</p>
+          <p>At Golden Sparrow, we pride ourselves on our expertise across a wide range of domains, including <strong>computer services</strong>, <strong>data mining</strong>, <strong>data analysis</strong>, <strong>recruitment</strong>, <strong>process improvement</strong>, <strong>operational payroll</strong>, and <strong>data management</strong>. Our mission is to provide tailored solutions that drive growth, optimize operations, and unlock the true potential of your organization.</p>
+          <p>With a team of highly skilled professionals and a commitment to excellence, we strive to deliver unparalleled service, fostering long-lasting partnerships built on trust and mutual success. Join us on this journey towards <strong>transformative growth</strong> and let Golden Sparrow be your guide to a brighter future.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
-<!--main end--> 
+
+
+<!-- about us ends -->
 
 <!--Features-->
 
+
 <section class="features section-spacing">
   <div class="container">
-    <h2 class="text-center">Featured services</h2>
+    <h2 class="text-center">Featured Services</h2>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="wow fadeInUp product-features row">
-          <div class="col-md-2 col-sm-2 col-xs-2 text-center"><i class="fa fa-rocket fa-3x"></i></div>
-          <div class="col-md-10 col-sm-10 col-xs-10"> 
-            <!--features 3-->
-            <h4>Retail</h4>
-            <p>We have expertise in retail ranging from Shoes to beauty products.</p>
-            <!--features 3 end--> 
+          <div class="col-md-3 col-sm-3 col-xs-3 text-center"><i class="fa fa-laptop fa-3x"></i></div>
+          <div class="col-md-9 col-sm-9 col-xs-9">
+            <h4>Computer Services</h4>
+            <p>We provide expert computer services to businesses, including software development, IT support, and network management.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="wow fadeInUp product-features row">
-          <div class="col-md-2 col-sm-2 col-xs-2 text-center"><i class="fa fa-bicycle fa-3x"></i></div>
-          <div class="col-md-10 col-sm-10 col-xs-10"> 
-            <!--features 3-->
-            <h4>Software Consultancy</h4>
-            <p>With 15+ years of consultancy experience, we build and ship products that your consumers just love!</p>
-            <!--features 3 end--> 
+          <div class="col-md-3 col-sm-3 col-xs-3 text-center"><i class="fa fa-database fa-3x"></i></div>
+          <div class="col-md-9 col-sm-9 col-xs-9">
+            <h4>Data Mining</h4>
+            <p>Our data mining experts help businesses extract valuable insights from their data, enabling informed decision-making.</p>
           </div>
         </div>
+      </div>
+      <div class="col-md-4">
+        <div class="wow fadeInUp product-features row">
+          <div class="col-md-3 col-sm-3 col-xs-3 text-center"><i class="fa fa-line-chart fa-3x"></i></div>
+          <div class="col-md-9 col-sm-9 col-xs-9">
+            <h4>Data Analysis</h4>
+            <p>Our data analysis services help businesses make sense of their data and uncover hidden patterns and trends.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="wow fadeInUp product-features row">
+          <div class="col-md-3 col-sm-3 col-xs-3 text-center"><i class="fa fa-users fa-3x"></i></div>
+          <div class="col-md-9 col-sm-9 col-xs-9">
+            <h4>Recruitment</h4>
+            <p>Our recruitment experts help businesses find and hire the best talent for their organization.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="wow fadeInUp product-features row">
+          <div class="col-md-3 col-sm-3 col-xs-3 text-center"><i class="fa fa-cogs fa-3x"></i></div>
+          <div class="col-md-9 col-sm-9 col-xs-9">
+            <h4>Process Improvement</h4>
+            <p>We help businesses streamline their processes, optimize operations, and improve overall efficiency.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="wow fadeInUp product-features row">
+          <div class="col-md-3 col-sm-3 col-xs-3 text-center"><i class="fa fa-money fa-3x"></i></div>
+          <div class="col-md-9 col-sm-9 col-xs-9">
+            <h4>Operational Payroll</h4>
+            <p>Our operational payroll services ensure accurate and timely payment of employees, while handling complex payroll calculations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="wow fadeInUp product-features row">
+          <div class="col-md-3 col-sm-3 col-xs-3 text-center"><i class="fa fa-cloud fa-3x"></i></div>
+          <div class="col-md-9 col-sm-9 col-xs-9">
+            <h4>Data Management</h4>
+            <p>Our data management solutions help businesses organize, store, secure, and efficiently manage their data assets.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="wow fadeInUp product-features row">
+          <div class="col-md-3 col-sm-3 col-xs-3 text-center"><i class="fa fa-bar-chart fa-3x"></i></div>
+          <div class="col-md-9 col-sm-9 col-xs-9">
+            <h4>Business Analytics</h4>
+            <p>Our business analytics services help organizations leverage data-driven insights to make informed strategic decisions and drive growth.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="wow fadeInUp product-features row">
+          <div class="col-md-3 col-sm-3 col-xs-3 text-center"><i class="fa fa-shield fa-3x"></i></div>
+          <div class="col-md-9 col-sm-9 col-xs-9">
+            <h4>Cybersecurity</h4>
+            <p>We offer comprehensive cybersecurity solutions to protect businesses from cyber threats, ensuring data privacy and system integrity.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -122,35 +204,63 @@
 
 <!--CONTACT-->
 
-<section class="contact section-spacing" id="contact">
+<div class="contact-page-area section-padding" id="contact-page-area">
   <div class="container">
-    <h2 class="text-center">Get in Touch</h2>
     <div class="row">
-
-      <div class="col-md-5"> 
-        
-        <!--contact form-->
-        
-        <div class="contact-form">
-          <form role="form" action="php/contact.php" method="post" id="contact-form">
-            <input type="text" class="wow fadeInUp form-control" name="name" id="name" placeholder="Your Name" required>
-            <input type="email" class="wow fadeInUp form-control" name="email" id="email" placeholder="Email Address" required>
-            <textarea class="wow fadeInUp form-control" name="message" id="message" rows="3" placeholder="Enter Your Message" required></textarea>
-            <button type="submit" class="wow fadeInUp btn btn-default submit-btn" id="submit-btn" value="Send">SUBMIT</button>
-          </form>
-          
-          <!--contact form end-->
-          <div class="success-cf">
-            <p>Thank You! Your message has been sent.</p>
-          </div>
-          <div class="error-cf">
-            <p>Something went wrong, try refreshing and submitting the form again.</p>
+      <div class="col-lg-5 col-md-12">
+        <div class="contact-page-item">
+          <h2>Get in Touch with Golden Sparrow</h2>
+          <p>Ready to elevate your business with our professional services? <br><br>Contact us today to discuss how we can support your needs. Whether you're looking to optimize your operations, expand your capabilities, or simply get a quote, our team is here to help.</p>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-12">
+        <div class="contact-area">
+          <h5>Fill out our online form, and a member of our team will get back to you promptly.</h5>
+          <div class="contact-form">
+            <form class="contact-validation-active" id="contact-form" onsubmit="sendMail(event)">
+              <div class="half-col">
+                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+              </div>
+              <div class="half-col">
+                <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
+              </div>
+              <div class="half-col">
+                <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone">
+              </div>
+              <div class="half-col">
+                <input type="text" name="address" id="address" class="form-control" placeholder="Address">
+              </div>
+              <div>
+                <textarea class="form-control" name="note" id="note" placeholder="Case Description..." required></textarea>
+              </div>
+              <div class="submit-btn-wrapper">
+                <button type="submit" class="theme-btn-s3">Send</button>
+                <div id="loader">
+                  <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+                </div>
+              </div>
+              <div class="clearfix error-handling-messages">
+                <div id="success">Thank you</div>
+                <div id="error">Error occurred while sending email. Please try again later.</div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
+    <h5>Join us on the journey towards excellence with Golden Sparrow – where your business's potential is unlocked with care and precision.</h5>
+    <!-- <div class="row">
+      <div class="col col-xs-12">
+        <div class="contact-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.92624218531!2d-121.94323612370528!3d37.50965772738696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc7b5bbc2db87%3A0x127136e895a08c21!2sBluejay%20Delivery!5e0!3m2!1sen!2sus!4v1712258185192!5m2!1sen!2sus" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
   </div>
-</section>
+</div>
+
+
+
 
 <!--CONTACT END--> 
 
@@ -188,8 +298,31 @@
 <script src="js/jquery.form.min.js"></script> 
 <script src="js/jquery.validate.min.js"></script> 
 <script src="js/jquery.simple-text-rotator.min.js"></script> 
-<script src="js/main.js"></script> 
+
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
 <script src="js/gmap.js"></script>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script> -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script> 
+
+<script type="module" src="js/main.js"></script>  
+
+<script>
+  jQuery(document).ready(function($) {
+    $('.slider-img').on('click', function() {
+      $('.slider-img').removeClass('active');
+      $(this).addClass('active');
+      
+      var title = $(this).data('title');
+      var text = $(this).data('text');
+      
+      $('#slider-title').text(title);
+      $('#slider-description').text(text);
+    });
+  });
+</script>
+
+
 </body>
 </html>

@@ -142,51 +142,61 @@ $(function() {
        ========================================================================== */
     
     
-    $('#contact-form').validate({
+       $("#contact-form").validate({
         rules: {
-            name: {
-                required: true,
-                minlength: 2
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            
-            message: {
-                required: true,
-                minlength: 10
-            }
+          name: {
+            required: true,
+            minlength: 2
+          },
+          email: {
+            required: true,
+            email: true
+          },
+          phone: {
+            required: true,
+            digits: true
+          },
+          address: {
+            required: true
+          }
         },
         messages: {
-            name: "<i class='fa fa-exclamation-triangle'></i>Please enter your name.",
-            email: {
-                required: "<i class='fa fa-exclamation-triangle'></i>Please Enter your email address.",
-                email: "<i class='fa fa-exclamation-triangle'></i>Please enter a valid email address."
-            },
-            message: "<i class='fa fa-exclamation-triangle'></i>Please enter your message."
+          name: "Please enter your name",
+          email: "Please enter a valid email address",
+          phone: "Please enter your phone number",
+          address: "Please enter your address"
         },
         submitHandler: function(form) {
-            $(form).ajaxSubmit({
-                type: "POST",
-                data: $(form).serialize(),
-                url: "php/contact.php",
-                success: function() {
-                    $('#contact-form :input').attr('disabled', 'disabled');
-                    $('#contact-form').fadeTo("slow", 0.15, function() {
-                        $(this).find(':input').attr('disabled', 'disabled');
-                        $(this).find('label').css('cursor', 'default');
-                        $('.success-cf').fadeIn();
-                    });
-                },
-                error: function() {
-                    $('#contact-form').fadeTo("slow", 0.15, function() {
-                        $('.error-cf').fadeIn();
-                    });
-                }
-            });
+          sendMail(event);
         }
-    });
+      });
+    
+    async function sendMail(event) {
+      event.preventDefault();
+      var params = {
+        from_name: document.getElementById("name").value,
+        contact: document.getElementById("phone").value,
+        to_name: "Golden Sparrow",
+        message: document.getElementById("note").value,
+        email: document.getElementById("email").value
+      };
+      const serviceID = "service_v4w2fyk";
+      const templateID = "template_95mkaaa";
+      const emailjsUserID = "PFrK-8QIoGZfrKmjr";
+    
+      try {
+        emailjs.init(emailjsUserID);
+        const res = await emailjs.send(serviceID, templateID, params);
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("address").value = "";
+        document.getElementById("note").value = "";
+        alert("Your email reached us. Thanks");
+      } catch (err) {
+        console.log(err);
+      }
+    }
 
     /* ==========================================================================
    ScrollTop Button
