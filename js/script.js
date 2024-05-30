@@ -695,20 +695,8 @@ const emailInput = document.getElementById('email');
 const phoneInput = document.getElementById('phone');
 const addressInput = document.getElementById('address');
 
-form.addEventListener('submit', (event) => {
-	event.preventDefault();
-  
-	const nameValid = validateName();
-	const emailValid = validateEmail();
-	const phoneValid = validatePhone();
-	const addressValid = validateAddress();
-  
-	if (nameValid && emailValid && phoneValid && addressValid) {
-	  sendMail(event);
-	}
-});
-  
-  function validateName() {
+
+function validateName() {
 	const name = nameInput.value.trim();
 	const isValid = name.length >= 2;
   
@@ -718,6 +706,46 @@ form.addEventListener('submit', (event) => {
   
 	return isValid;
   }
+
+
+form.addEventListener('submit', async (event) => {
+	event.preventDefault();
+  
+	const nameValid = validateName();
+	const emailValid = validateEmail();
+	const phoneValid = validatePhone();
+	const addressValid = validateAddress();
+  
+	if (nameValid && emailValid && phoneValid && addressValid) {
+		var params = {
+			from_name: document.getElementById("name").value,
+			contact: document.getElementById("phone").value,
+			to_name: "Golden Sparrow",
+			message: document.getElementById("note").value,
+			email: document.getElementById("email").value
+		  };
+		
+		  const serviceID = "service_09mt6sp";
+      		const templateID = "template_e38g3uu";
+     	 const emailjsUserID = "amOuNkktospDYLyfn";
+    
+		
+		  try {
+			emailjs.init(emailjsUserID);
+			const res = await emailjs.send(serviceID, templateID, params);
+			document.getElementById("name").value = "";
+			document.getElementById("email").value = "";
+			document.getElementById("phone").value = "";
+			document.getElementById("address").value = "";
+			document.getElementById("note").value = "";
+			alert("Your email reached us. Thanks");
+		  } catch (err) {
+			console.log(err);
+		  }
+	}
+});
+  
+  
   
   function validateEmail() {
 	const email = emailInput.value.trim();
@@ -753,7 +781,6 @@ form.addEventListener('submit', (event) => {
   }
   
 async function sendMail(event) {
-	event.preventDefault(); // Add this line to prevent default form submission
   
 	var params = {
 	  from_name: document.getElementById("name").value,
